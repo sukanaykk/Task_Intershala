@@ -40,8 +40,8 @@ class Migration(migrations.Migration):
                 'verbose_name_plural': 'users',
                 'abstract': False,
             },
-            doctors=[
-                ('objects', django.contrib.auth.models.UserDoctor()),
+            managers=[
+                ('objects', django.contrib.auth.models.UserManager()),
             ],
         ),
         migrations.CreateModel(

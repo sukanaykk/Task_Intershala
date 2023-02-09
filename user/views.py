@@ -17,7 +17,7 @@ class PatientSignUpView(CreateView):
     def form_valid(self, form):
         user = form.save()
         login(self.request, user)
-        # return redirect('index')
+        return redirect('index')
 
 class DoctorSignUpView(CreateView):
     model = User
@@ -29,7 +29,7 @@ class DoctorSignUpView(CreateView):
     def form_valid(self, form):
         user = form.save()
         login(self.request, user)
-        # return redirect('index')
+        return redirect('index')
 
 
 # def login_view(request):
